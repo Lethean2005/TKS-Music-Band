@@ -22,7 +22,7 @@ a {
 }
 .nav-bar {
     @include flexbox(flex-start, center, 5px);
-  
+
     img {
       width: 40px;
       border-radius: 50%;
@@ -32,47 +32,46 @@ a {
     padding: $padding-small;
 }
 .get-start {
-    @include button-style($secondary-color, $dark-text-color);
-    background: #29B1CC;
-    background: linear-gradient(to bottom right, #29B1CC 0%, #60609E 100%);
-    img{
-      height: 20px;
-      width: 20px;
-      margin-left: 2px;
-      vertical-align: middle;
+  @include button-style($secondary-color, $dark-text-color);
+  background: #29B1CC;
+  background: linear-gradient(to bottom right, #29B1CC 0%, #60609E 100%);
+  img{
+    height: 20px;
+    width: 20px;
+    margin-left: 2px;
+    vertical-align: middle;
+  }
+  @keyframes jump {
+    0% {
+      transform: translateY(0);
     }
-    @keyframes jump {
-      0% {
-        transform: translateY(0);
+    50% {
+      transform: translateY(-12px); /* Move the image up */
       }
-      50% {
-        transform: translateY(-12px); /* Move the image up */
-      }
-      100% {
-        transform: translateY(0); /* Move the image back down */
-      }
-    }
-    
-    img.jump {
-      animation: jump 0.90s ease-in-out infinite; /* Apply the animation */
-    }
+    100% {
+    transform: translateY(0); /* Move the image back down */
+  }
+} 
+  img.jump {
+    animation: jump 0.90s ease-in-out infinite; /* Apply the animation */
+  }
 }
 .sign-in {
-    @include button-style($light-bg-color, $light-bg-color);
-    background: #6B70FF;
-    background: linear-gradient(to left, #6B70FF 0%, #4F55FF 50%, #7268FF 100%);
-    img{
-      height: 20px;
-      width: 20px;
-      margin-left: 2px;
-      vertical-align: middle;
-    }
-    &:hover {
-      background-color: $hover-color;
-      color: $dark-text-color;
-    }
+  @include button-style($light-bg-color, $light-bg-color);
+  background: #6B70FF;
+  background: linear-gradient(to left, #6B70FF 0%, #4F55FF 50%, #7268FF 100%);
+  img{
+    height: 20px;
+    width: 20px;
+    margin-left: 2px;
+    vertical-align: middle;
+  }
+  &:hover {
+    background-color: $hover-color;
+    color: $dark-text-color;
+  }
 }
-  .material-icons {
+.material-icons {
     height: 4vh;
     width: 14px;
     vertical-align:middle;
@@ -108,21 +107,23 @@ a {
         }
       }
     }
-    :hover .select-options {
-      display: block;
-      box-shadow: $shadow-color 0px 3px 8px;
-    }
-}
-  
-.title {
-    margin-top: 50px;
-    text-align: center;
-    padding: $padding-small;
-    h1, h3 {
-      color: $dark-text-color;
-      text-shadow: 2px 2px 4px $shadow-color;
-    }
+  :hover .select-options {
+    display: block;
+    box-shadow: $shadow-color 0px 3px 8px;
   }
+}
+.h3{
+  display: flex;
+}
+.title {
+  margin-top: 50px;
+  text-align: center;
+  padding: $padding-small;
+  h1, h3 {
+    color: $dark-text-color;
+    text-shadow: 2px 2px 4px $shadow-color;
+  }
+}
   .home{
     border-bottom: 3px solid orange;
   }
@@ -134,15 +135,15 @@ a {
       background-color: $hover-color;
     }
   }
-  .more {
+.more {
     @include button-style($dark-text-color, $light-bg-color, $padding-small 25px);
     box-shadow: $shadow-color 0px 3px 8px;
     color: $light-text-color;
   
-    &:hover {
+  &:hover {
       background-color: $hover-color;
       color: $dark-text-color;
       transition: background-color 0.3s ease;
-    }
+  }
 }
   
